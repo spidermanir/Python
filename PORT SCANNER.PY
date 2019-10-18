@@ -97,6 +97,7 @@ try:
     for port in range(1,1025):  
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex((remoteServerIP, port))
+        print("Scaning Port:{}".format(port))
         if result == 0:
             print("Port {}: 	 Open".format(port))
         sock.close()
